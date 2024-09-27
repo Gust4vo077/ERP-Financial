@@ -1,0 +1,1 @@
+docker run -d --name railsCMD -v "${PWD}:/app" ruby-rails tail -f /dev/null

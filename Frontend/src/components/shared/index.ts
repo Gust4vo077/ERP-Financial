@@ -1,9 +1,14 @@
 import { Grid } from "./grid";
+import { LayoutDefault } from "./layout";
 import Topic from "./text/topic";
 
 
 
-export const Template = {
+const Template = {
     Grid,
-    Topic
+    Topic,
+    LayoutDefault,
+
 }
+
+export default Template;

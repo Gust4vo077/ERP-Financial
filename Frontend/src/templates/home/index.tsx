@@ -1,13 +1,10 @@
-import {Text} from  'react';
+import { Text } from 'react';
+import Template from '../../components/shared/'; 
 
 const HomeTemplate = () => {
     return (
-        <div>
-            <p className="bg-white">
-                HomeTemplate HomeTemplate HomeTemplate HomeTemplate HomeTemplate HomeTemplate
-            </p>
-        </div>
+        <Template.LayoutDefault.Mounted />
     );
 };
 
-export default HomeTemplate
+export default HomeTemplate;

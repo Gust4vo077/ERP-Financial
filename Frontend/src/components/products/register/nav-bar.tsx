@@ -1,7 +1,7 @@
 // NavBar.tsx
 import { useState } from "react";
 import { Col } from "antd";
-import { Template } from "../../shared";
+import Template from "../../shared";
 
 const NavBar = () => {
   const [selectedItem, setSelectedItem] = useState<string | null>(null);

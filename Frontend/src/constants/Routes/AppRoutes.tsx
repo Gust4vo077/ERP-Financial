@@ -1,7 +1,8 @@
 
+import Mounted from "../../components/shared/layout/mounted";
 import { Templates } from "../../templates";
 import ROUTESPATH from "../RoutePath/path";
-import {BrowserRouter,Routes,Route} from "react-router-dom";
+import {BrowserRouter,Routes,Route, Outlet} from "react-router-dom";
 
 const AppRoutes= ()=> {
   
@@ -13,10 +14,15 @@ const AppRoutes= ()=> {
         <Route path={ROUTESPATH.Auth.REGISTER} element={<Templates.Auth.RegisterTemplete />}/>
         <Route path={ROUTESPATH.Auth.FORGET_PASSWORD} element={<Templates.Auth.ForgetTemlate />}/>
        
-        <Route path={ROUTESPATH.Product.REGISTER} element={<Templates.ProductTemplate.ProductNew />}/>
-
-        <Route path={ROUTESPATH.HOME} element={<Templates.HomeTemplate />}/>
-
+       <Route element={
+         <Mounted>
+           <Outlet></Outlet>
+         </Mounted>
+       }>
+         <Route path={ROUTESPATH.Product.REGISTER} element={<Templates.ProductTemplate.ProductNew />}/>
+  
+         <Route path={ROUTESPATH.HOME} element={<Templates.HomeTemplate />}/>
+       </Route>
        </Routes>
      </BrowserRouter>
     );

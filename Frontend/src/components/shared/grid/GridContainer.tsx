@@ -6,6 +6,7 @@ const GridContainer = ({ children }) => {
     <Flex
       style={{
         width: "100%",
+        height: "auto",
         }}
       justify="center" 
       align="center" 

@@ -1,5 +1,5 @@
 // NavBar.tsx
-import { useState } from "react";
+import { Children, PropsWithChildren, useState } from "react";
 import { Col } from "antd";
 import Template from "../../shared";
 
@@ -15,7 +15,7 @@ const NavBar = () => {
   const Titles: string[] = ["Geral", "Tributos", "Quantidade de Entrada", "Quantidade de Saída"];
 
   return (   
-    <Template.Grid.DefaultRow gutter={[60, 25]}>
+    <Template.Grid.DefaultRow gutter={[10, 30]} >
       {Titles.map((item, index) => (
         <Col 
           key={index} 
@@ -24,13 +24,14 @@ const NavBar = () => {
           md={item.includes("Quantidade") ? 8 : 4} 
           lg={item.includes("Quantidade") ? 8 : 4} 
           align="center" 
-          className={`text-black text-lg font-sans transition-opacity duration-300 hover:opacity-20 ${isSelected(item) ? 'underline' : ''}`} 
+          className={`transition-opacity duration-300 hover:opacity-20 ${isSelected(item) ? 'bg-gray-50 rounded-3xl px-10 ' : ''}`} 
           style={{ whiteSpace: 'nowrap', cursor: 'pointer' }} 
           onClick={() => handleItemClick(item)}
         >
-          <p>{item}</p>
+          <p className="px-7 text-zinc-700 text-lg  font-sans ">{item}</p>
         </Col>
       ))}
+
     </Template.Grid.DefaultRow>
   );
 };

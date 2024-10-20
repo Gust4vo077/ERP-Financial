@@ -2,7 +2,7 @@ import { Controller, useFormContext } from "react-hook-form";
 import { RegisterFormItem } from "../register-form-item";
 import  InputDefault from "../../../shared/input/input-default";
 import { Template } from "../../../shared";
-import { TypeFiscalValidationSchema } from "../../../../validations/product/tax-info";
+import { TypeFiscalValidationSchema } from "../../../../validations/products/tax-info";
 
 const TaxInfoStep = () => {
     const { formState: { errors }, control } = useFormContext<TypeFiscalValidationSchema.typeFiscalIncomeValidationSchema>();
